@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "client",
+			"name": "Client"
+		},
+		{
+			"path": "amazen-server",
+			"name": "Server"
+		}
+	],
+	"settings": {}
+}
