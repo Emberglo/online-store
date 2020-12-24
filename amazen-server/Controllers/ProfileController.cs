@@ -41,7 +41,7 @@ namespace amazen_server.Controllers
             }
         }
 
-        [HttpGet("{id}/items")]
+        [HttpGet("/{id}/items")]
         public async Task<ActionResult<Profile>> GetItemsByProfile(string id)
         {
             try

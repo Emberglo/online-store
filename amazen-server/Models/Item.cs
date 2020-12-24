@@ -12,7 +12,7 @@ namespace amazen_server.Models
 
         public string CreatorId { get; set; }
 
-        public string Creator { get; set; }
+        public Profile Creator { get; set; }
     }
 
     public class ListItemViewModel : Item
