@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "c:\\source\\codeworks\\amazen\\amazen-server\\amazen-server.csproj": {}
+    "C:\\source\\codeworks\\week12\\online-store\\amazen-server\\amazen-server.csproj": {}
   },
   "projects": {
-    "c:\\source\\codeworks\\amazen\\amazen-server\\amazen-server.csproj": {
+    "C:\\source\\codeworks\\week12\\online-store\\amazen-server\\amazen-server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\source\\codeworks\\amazen\\amazen-server\\amazen-server.csproj",
+        "projectUniqueName": "C:\\source\\codeworks\\week12\\online-store\\amazen-server\\amazen-server.csproj",
         "projectName": "amazen-server",
-        "projectPath": "c:\\source\\codeworks\\amazen\\amazen-server\\amazen-server.csproj",
-        "packagesPath": "C:\\Users\\darry\\.nuget\\packages\\",
-        "outputPath": "c:\\source\\codeworks\\amazen\\amazen-server\\obj\\",
+        "projectPath": "C:\\source\\codeworks\\week12\\online-store\\amazen-server\\amazen-server.csproj",
+        "packagesPath": "C:\\Users\\rccar\\.nuget\\packages\\",
+        "outputPath": "C:\\source\\codeworks\\week12\\online-store\\amazen-server\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\darry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\rccar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

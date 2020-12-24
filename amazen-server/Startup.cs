@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using CodeWorks.Auth0Provider;
+using amazen_server.Repositories;
+using amazen_server.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,7 +18,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MySqlConnector;
 
-namespace amazen-server
+namespace amazen_server
 {
     public class Startup
     {
@@ -60,11 +62,17 @@ namespace amazen-server
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "amazen-server", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "latefall2020_dotnet_bloggr", Version = "v1" });
             });
-
-            // REVIEW Do you want to do something here?
-
+            services.AddScoped<IDbConnection>(x => CreateDbConnection());
+            services.AddTransient<ProfilesService>();
+            services.AddTransient<ProfilesRepository>();
+            services.AddTransient<ItemsService>();
+            services.AddTransient<ItemsRepository>();
+            // services.AddTransient<CompaniesService>();
+            // services.AddTransient<CompaniesRepository>();
+            // services.AddTransient<CompanyBlogsService>();
+            // services.AddTransient<CompanyBlogsRepository>();
         }
 
 
@@ -81,7 +89,7 @@ namespace amazen-server
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "amazen-server v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "latefall2020_dotnet_bloggr v1"));
                 app.UseCors("CorsDevPolicy");
             }
 
