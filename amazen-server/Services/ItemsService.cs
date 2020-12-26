@@ -23,7 +23,7 @@ namespace amazen_server.Services
 
         internal IEnumerable<Item> GetItemsByProfile(string profileId, string userId)
         {
-            return _repo.getItemsByProfile(profileId).ToList().FindAll(b => b.CreatorId == userId);
+            return _repo.getItemsByProfile(profileId).ToList().FindAll(i => i.CreatorId == userId || i.IsAvailable);
         }
 
         public Item Create(Item newItem)

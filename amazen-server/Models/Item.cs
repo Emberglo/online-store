@@ -8,6 +8,8 @@ namespace amazen_server.Models
 
         public decimal Price { get; set; }
 
+        public bool IsAvailable { get; set; }
+
         public int Id { get; set; }
 
         public string CreatorId { get; set; }
