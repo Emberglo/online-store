@@ -69,10 +69,10 @@ namespace amazen_server
             services.AddTransient<ProfilesRepository>();
             services.AddTransient<ItemsService>();
             services.AddTransient<ItemsRepository>();
-            // services.AddTransient<CompaniesService>();
-            // services.AddTransient<CompaniesRepository>();
-            // services.AddTransient<CompanyBlogsService>();
-            // services.AddTransient<CompanyBlogsRepository>();
+            services.AddTransient<ListsService>();
+            services.AddTransient<ListsRepository>();
+            services.AddTransient<ListItemsService>();
+            services.AddTransient<ListItemsRepository>();
         }
 
 
