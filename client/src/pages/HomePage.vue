@@ -13,8 +13,8 @@ import { AppState } from '../AppState'
 export default {
   name: 'Home',
   setup() {
-    onMounted(() => {
-      itemService.getPublicItems()
+    onMounted(async() => {
+      await itemService.getPublicItems()
     })
     return {
       profile: computed(() => AppState.profile),

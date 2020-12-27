@@ -6,8 +6,17 @@ class ItemService {
   async getPublicItems() {
     try {
       const res = await api.get('/api/items')
-      logger.log(res.data)
       AppState.items = res.data
+    } catch (err) {
+      logger.error(err)
+    }
+  }
+
+  async getActiveItem(itemId) {
+    try {
+      const res = await api.get('/api/items/' + itemId)
+      logger.log('activeItemFunction', res.data)
+      AppState.activeItem = res.data
     } catch (err) {
       logger.error(err)
     }

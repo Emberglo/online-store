@@ -21,6 +21,11 @@ namespace amazen_server.Services
             return _repo.GetAll();
         }
 
+        public Item GetOne(int id)
+        {
+            return _repo.GetOne(id);
+        }
+
         internal IEnumerable<Item> GetItemsByProfile(string profileId, string userId)
         {
             return _repo.getItemsByProfile(profileId).ToList().FindAll(i => i.CreatorId == userId || i.IsAvailable);

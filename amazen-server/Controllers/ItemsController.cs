@@ -34,6 +34,19 @@ namespace amazen_server.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public ActionResult<Item> GetOne(int id)
+        {
+            try
+            {
+                return Ok(_its.GetOne(id));
+            }
+            catch (Exception err)
+            {
+                return BadRequest(err.Message);
+            }
+        }
+
         [HttpPost]
         [Authorize]
         public async Task<ActionResult<Item>> Create([FromBody] Item newItem)

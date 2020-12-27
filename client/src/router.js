@@ -17,8 +17,8 @@ const routes = [
     component: loadPage('AboutPage')
   },
   {
-    path: '/item',
-    name: 'Item',
+    path: '/items/:itemId',
+    name: 'ItemPage',
     component: loadPage('ItemPage')
   },
   {

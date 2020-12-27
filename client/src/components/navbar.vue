@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark align-items-center">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
         <p class="mb-0">
@@ -19,19 +19,19 @@
       <span class="navbar-toggler-icon" />
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto mt-2">
         <li class="nav-item">
-          <router-link :to="{ name: 'Home' }" class="nav-link">
+          <router-link :to="{ name: 'Home' }" class="nav-link p-1">
             Store
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'About' }" class="nav-link">
+          <router-link :to="{ name: 'About' }" class="nav-link p-1">
             About
           </router-link>
         </li>
       </ul>
-      <span class="navbar-text">
+      <span class="navbar-text bg-dark">
         <button
           class="btn btn-outline-primary text-uppercase"
           @click="login"
@@ -40,7 +40,7 @@
           Login
         </button>
 
-        <div class="dropdown" v-else>
+        <div class="dropdown p-1" v-else>
           <div
             class="dropdown-toggle"
             @click="state.dropOpen = !state.dropOpen"
@@ -102,7 +102,13 @@ export default {
 
 <style scoped>
 nav {
-  height: 7vh;
+  height: 8vh;
+}
+.nav-link {
+  max-width: 247.83px;
+}
+a.nav-link {
+  background-color: #2c4059;
 }
 .dropdown-menu {
   user-select: none;
