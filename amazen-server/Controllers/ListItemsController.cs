@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace amazen_server.Controllers
 {
     [ApiController]
-    [Route("api/[controller")]
+    [Route("api/[controller]")]
     public class ListItemsController : ControllerBase
     {
         private readonly ListItemsService _lis;

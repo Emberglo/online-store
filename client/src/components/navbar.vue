@@ -2,11 +2,9 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
-        <img
-          alt="logo"
-          src="../assets/img/cw-logo.png"
-          height="45"
-        />
+        <p class="mb-0">
+          RC's Bodega
+        </p>
       </div>
     </router-link>
     <button
@@ -24,7 +22,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link :to="{ name: 'Home' }" class="nav-link">
-            Home
+            Store
           </router-link>
         </li>
         <li class="nav-item">
@@ -51,7 +49,7 @@
               :src="user.picture"
               alt="user photo"
               height="40"
-              class="rounded"
+              class="rounded-circle"
             />
             <span class="mx-3">{{ user.name }}</span>
           </div>
@@ -103,6 +101,9 @@ export default {
 </script>
 
 <style scoped>
+nav {
+  height: 7vh;
+}
 .dropdown-menu {
   user-select: none;
   display: block;

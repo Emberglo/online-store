@@ -10,6 +10,8 @@ namespace amazen_server.Models
 
         public bool IsAvailable { get; set; }
 
+        public string Picture { get; set; }
+
         public int Id { get; set; }
 
         public string CreatorId { get; set; }

@@ -1,15 +1,27 @@
 <template>
-  <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-    <img src="https://bcw.blob.core.windows.net/public/img/8600856373152463" alt="CodeWorks Logo">
-    <h1 class="my-5 bg-dark text-light p-3 rounded d-flex align-items-center">
-      <span class="mx-2 text-white">Vue 3 Starter</span>
-    </h1>
+  <div class="home container-fluid align-items-center justify-content-center h-100">
+    <div class="row justify-content-around">
+      <ItemComponent v-for="item in items" :item-prop="item" :key="item.id" />
+    </div>
   </div>
 </template>
 
 <script>
+import { computed, onMounted } from 'vue'
+import { itemService } from '../services/ItemService'
+import { AppState } from '../AppState'
 export default {
-  name: 'Home'
+  name: 'Home',
+  setup() {
+    onMounted(() => {
+      itemService.getPublicItems()
+    })
+    return {
+      profile: computed(() => AppState.profile),
+      items: computed(() => AppState.items)
+    }
+  },
+  components: {}
 }
 </script>
 

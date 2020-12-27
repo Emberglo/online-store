@@ -37,13 +37,13 @@ namespace amazen_server.Repositories
 
         public int Create(Item newItem)
         {
-            string sql = "INSERT INTO items (name, description, price, isAvailable, creatorId) VALUES (@Name, @Description, @Price, @isAvailable, @CreatorId);";
+            string sql = "INSERT INTO items (name, description, price, isAvailable, picture, creatorId) VALUES (@Name, @Description, @Price, @isAvailable, @Picture, @CreatorId);";
             return _db.ExecuteScalar<int>(sql, newItem);
         }
 
         internal void Edit(Item editedItem)
         {
-            string sql = "UPDATE items SET description = @Description, name = @Name, price = @Price, isAvailable = @isAvailable WHERE id = @Id;";
+            string sql = "UPDATE items SET description = @Description, name = @Name, price = @Price, isAvailable = @isAvailable, picture = @Picture WHERE id = @Id;";
             _db.Execute(sql, editedItem);
         }
 
